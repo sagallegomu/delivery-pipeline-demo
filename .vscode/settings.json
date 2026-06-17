@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/demo-henry/bin/python",
+  "jupyter.kernels.filter": [],
+  "jupyter.kernels.excludePythonEnvironments": false
+}

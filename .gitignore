@@ -17,3 +17,6 @@ data/processed/
 
 # Docker
 postgres-db-volume/
+
+# Virtualenvs locales
+demo-henry/

@@ -1,0 +1,2 @@
+# Excluye módulos de soporte para que Airflow no los parsee como DAGs
+pipeline.py

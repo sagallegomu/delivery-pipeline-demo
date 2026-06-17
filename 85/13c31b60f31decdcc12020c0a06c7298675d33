@@ -1,0 +1,19 @@
+pyproject.toml
+  s_ec0b62c2d709b1::t_d336964975f24b 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "8513c31b60f31decdcc12020c0a06c7298675d33",
+  "prompts": {},
+  "sessions": {
+    "s_ec0b62c2d709b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1ddf3dc0-162e-46bc-9f5a-852e68a767a1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "sgallego_meli <sara.gallego@mercadolibre.com.co>"
+    }
+  }
+}

@@ -5,7 +5,7 @@
 | Requisito       | Versión   | Cómo verificar              |
 |-----------------|-----------|-----------------------------|
 | Docker Desktop  | ≥ 4.x     | `docker --version`          |
-| Docker Compose  | ≥ 2.x     | `docker compose version`    |
+| Docker Compose  | ≥ 2.x     | `docker-compose version`    |
 | RAM libre       | ≥ 4 GB    | Docker Desktop → Resources  |
 | Puerto 8080     | Disponible | `lsof -i :8080`            |
 
@@ -46,8 +46,8 @@ Contraseña:  admin
 ### Desde la terminal
 
 ```bash
-docker compose exec airflow-scheduler airflow dags trigger delivery_delay_pipeline
-docker compose exec airflow-scheduler airflow dags list-runs -d delivery_delay_pipeline
+docker-compose exec airflow-scheduler airflow dags trigger delivery_delay_pipeline
+docker-compose exec airflow-scheduler airflow dags list-runs -d delivery_delay_pipeline
 ```
 
 ---
@@ -59,14 +59,14 @@ Cuando `clean` falla, Airflow bloquea **automáticamente** todas las tareas sigu
 
 ```bash
 # 1. Activar el interruptor de fallo
-docker compose exec airflow-scheduler airflow variables set FAIL_CLEAN true
+docker-compose exec airflow-scheduler airflow variables set FAIL_CLEAN true
 
 # 2. Disparar el DAG desde la UI
 #    → clean falla en rojo
 #    → engineer, train, evaluate, generate quedan en upstream_failed
 
 # 3. Recuperar
-docker compose exec airflow-scheduler airflow variables set FAIL_CLEAN false
+docker-compose exec airflow-scheduler airflow variables set FAIL_CLEAN false
 ```
 
 ---
@@ -76,9 +76,9 @@ docker compose exec airflow-scheduler airflow variables set FAIL_CLEAN false
 | Acción                        | Comando                          |
 |-------------------------------|----------------------------------|
 | Levantar el stack             | `./run_airflow.sh`               |
-| Apagar el stack               | `docker compose down`            |
-| Ver logs de un servicio       | `docker compose logs -f airflow-scheduler` |
-| Reconstruir tras un cambio    | `docker compose up -d --build`   |
+| Apagar el stack               | `docker-compose down`            |
+| Ver logs de un servicio       | `docker-compose logs -f airflow-scheduler` |
+| Reconstruir tras un cambio    | `docker-compose up -d --build`   |
 
 ---
 
@@ -106,11 +106,11 @@ kill -9 <PID>
 
 **El DAG no aparece en la UI**
 ```bash
-docker compose exec airflow-scheduler airflow dags list-import-errors
+docker-compose exec airflow-scheduler airflow dags list-import-errors
 ```
 
 **Reseteo completo**
 ```bash
-docker compose down -v
+docker-compose down -v
 ./run_airflow.sh
 ```

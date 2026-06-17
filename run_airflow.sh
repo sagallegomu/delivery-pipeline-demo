@@ -4,9 +4,9 @@ set -euo pipefail
 echo "🚀  Levantando stack de Airflow..."
 
 mkdir -p logs data/processed
-export AIRFLOW_UID=$(id -u)
+export AIRFLOW_UID=50000
 
-docker compose up -d --build
+docker-compose up -d --build
 
 echo "⏳  Esperando a que el webserver esté disponible..."
 until curl -sf http://localhost:8080/health | grep -q '"healthy"'; do

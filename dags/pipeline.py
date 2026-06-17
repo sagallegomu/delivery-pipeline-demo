@@ -80,11 +80,13 @@ def train_model(df: pd.DataFrame):
     return model, X_test, y_test
 
 
-def evaluate_model(model, X_test: pd.DataFrame, y_test: pd.Series) -> None:
+def evaluate_model(model, X_test: pd.DataFrame, y_test) -> None:
     """Paso 5 — Métricas de desempeño sobre el set de prueba."""
     y_pred = model.predict(X_test)
+    # XCom puede cambiar el dtype al serializar — forzamos int para sklearn
+    y_true = pd.Series(y_test).astype(int).values
     print("✅ evaluate\n")
-    print(classification_report(y_test, y_pred, target_names=["A tiempo", "Tarde"]))
+    print(classification_report(y_true, y_pred, target_names=["A tiempo", "Tarde"]))
 
 
 def generate_predictions(

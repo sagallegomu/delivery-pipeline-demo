@@ -1,0 +1,39 @@
+run_airflow.sh
+  s_ec0b62c2d709b1::t_f8d67dd6537a59 1-21
+Dockerfile
+  s_ec0b62c2d709b1::t_338addb0dc47d9 1-11
+.python-version
+  s_ec0b62c2d709b1::t_efcd257dda3623 1
+docker-compose.yml
+  s_ec0b62c2d709b1::t_3549c147d171c8 1-87
+dags/.airflowignore
+  s_ec0b62c2d709b1::t_64705b833aa347 1-2
+dags/delivery_pipeline_dag.py
+  s_ec0b62c2d709b1::t_8f162f39eed8d5 1-88
+.gitignore
+  s_ec0b62c2d709b1::t_2448b15d742418 1-19
+runbook.md
+  s_ec0b62c2d709b1::t_7b908ae099c1cc 1-116
+notebooks/delivery_pipeline_demo.ipynb
+  s_ec0b62c2d709b1::t_63bafdd7b25784 1-280
+README.md
+  s_ec0b62c2d709b1::t_8cce3ff3d13af7 1-33
+dags/pipeline.py
+  s_ec0b62c2d709b1::t_963c451f11e4a8 1-104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4cdb6f72ea2e7624c3cbc4c6c04aed7c82a2b922",
+  "prompts": {},
+  "sessions": {
+    "s_ec0b62c2d709b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1ddf3dc0-162e-46bc-9f5a-852e68a767a1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "sgallego_meli <sara.gallego@mercadolibre.com.co>"
+    }
+  }
+}

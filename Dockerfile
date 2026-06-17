@@ -6,6 +6,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 USER airflow
-RUN pip install --no-cache-dir \
-    pandas==2.2.2 \
-    scikit-learn==1.5.0
+COPY pyproject.toml poetry.lock ./
+RUN pip install --no-cache-dir poetry==1.8.5 \
+    && poetry export --without-hashes --only main -f requirements.txt -o /tmp/requirements.txt \
+    && pip install --no-cache-dir -r /tmp/requirements.txt \
+    && pip uninstall -y poetry \
+    && rm /tmp/requirements.txt

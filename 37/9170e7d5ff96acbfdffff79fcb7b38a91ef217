@@ -1,0 +1,23 @@
+dags/pipeline.py
+  s_ec0b62c2d709b1::t_8f4ff14d319b42 83,86-87,89
+run_airflow.sh
+  s_ec0b62c2d709b1::t_c92676bdbc383d 7
+README.md
+  s_ec0b62c2d709b1::t_cc7cc24f8aa851 1,3,5-28,31,34-50,57-59,61-81,85-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "379170e7d5ff96acbfdffff79fcb7b38a91ef217",
+  "prompts": {},
+  "sessions": {
+    "s_ec0b62c2d709b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1ddf3dc0-162e-46bc-9f5a-852e68a767a1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "sgallego_meli <sara.gallego@mercadolibre.com.co>"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+Dockerfile
+  s_ec0b62c2d709b1::t_a3e9f58cc42424 9-14
+pyproject.toml
+  s_ec0b62c2d709b1::t_5bd89222a251c2 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "29a1537db8ece8ddbaee67e07ad65e02b9187c05",
+  "prompts": {},
+  "sessions": {
+    "s_ec0b62c2d709b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1ddf3dc0-162e-46bc-9f5a-852e68a767a1",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "sgallego_meli <sara.gallego@mercadolibre.com.co>"
+    }
+  }
+}

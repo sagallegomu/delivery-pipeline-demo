@@ -50,11 +50,29 @@ extract → clean → engineer → train → evaluate → generate
 ### Levantar Airflow
 
 ```bash
-chmod +x run_airflow.sh
-./run_airflow.sh
+# 1. Iniciar el daemon de Docker (Colima)
+colima start
+
+# 2. Ir al directorio del proyecto
+cd ~/Documents/Personal/Henry/delivery-pipeline-demo
+
+# 3. Levantar los contenedores
+docker-compose up -d
+
+# 4. Verificar que todo esté corriendo (opcional)
+docker-compose ps
 ```
 
 UI en `http://localhost:8080` — usuario `admin` / contraseña `admin`.
+
+DAG disponible en `http://localhost:8080/dags/delivery_delay_pipeline/grid`.
+
+### Bajar Airflow
+
+```bash
+cd ~/Documents/Personal/Henry/delivery-pipeline-demo
+docker-compose down
+```
 
 ### Desarrollo local (notebook)
 

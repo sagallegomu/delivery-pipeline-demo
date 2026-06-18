@@ -1,0 +1,19 @@
+README.md
+  s_51093aa141be91::t_0da11f60c80650 53-63,68-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "8c62b0e049a4de89bf5efd2af10280f3ac822dad",
+  "prompts": {},
+  "sessions": {
+    "s_51093aa141be91": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4b349ad0-1e63-453c-aa50-c49add4801cc",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "sgallego_meli <sara.gallego@mercadolibre.com.co>"
+    }
+  }
+}
